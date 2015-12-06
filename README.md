@@ -15,7 +15,7 @@ A tutorial on setting up Dokku on your local machine via Vagrant and on AWS EC2.
 `brew cask install vagrant-manager` 
 
 ## Set up project for Dokku
-For this tutorial, I'm going to use an Express app as an example. You can fork the example app [here.](https://github.com/kevinnguy/express-example)
+For this tutorial, I'm going to use an Express app as an example. You can clone the example app repo [here.](https://github.com/kevinnguy/express-example)
 
 ## Set up Dokku on your local Vagrant machine
 1. Create the Vagrant virtual machine by changing directory to your local dokku repo  
@@ -24,7 +24,6 @@ For this tutorial, I'm going to use an Express app as an example. You can fork t
 2. Create a Vagrant virtual machine with Dokku!  
 `vagrant up`
 
-Once Vagrant is done creating a virtual machine, access [10.0.0.2](10.0.0.2)
-
 ## Finish setting up Dokku on your local Vagrant machine
-1. Access [10.0.0.2](10.0.0.2) on your browser.
+1. Access [10.0.0.2](10.0.0.2) on your browser.  
+![browser](1.png "browser")
