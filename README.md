@@ -24,6 +24,16 @@ For this tutorial, I'm going to use an Express app as an example. You can clone 
 2. Create a Vagrant virtual machine with Dokku!  
 `vagrant up`
 
+3. You want to set the local IP (default is 10.0.0.2) of your Vagrant machine in your `/etc/hosts` file and pick a hostname. For this tutorial, we will use the hostname: `dokku.me`
+
+`10.0.0.2 dokku.me`
+
 ## Finish setting up Dokku on your local Vagrant machine
-1. Access [10.0.0.2](10.0.0.2) on your browser.  
+1. Access [dokku.me](http://dokku.me) on your browser.  
 ![browser](1.png "browser")
+
+2. Paste your `ssh` public key, found at `~/.ssh/id_rsa.pub`
+
+3. For `Hostname` we will use `dokku.me`
+
+4. Check `Use virtualhost naming for apps` 
