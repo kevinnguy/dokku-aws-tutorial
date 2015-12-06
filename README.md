@@ -1,0 +1,2 @@
+# Dokku - AWS Tutorial
+A tutorial on setting up Dokku on your local machine via Vagrant and on AWS EC2. Thanks to [this article](https://medium.com/@alfeto/dokku-on-vagrant-and-aws-with-postgres-8a591bb48f51) for teaching me how to do this. 
