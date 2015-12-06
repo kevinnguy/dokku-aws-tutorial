@@ -35,11 +35,11 @@ The folder name should be `express-example` and we will use this name as our pro
 
 2. Paste your ssh public key, found at `~/.ssh/id_rsa.pub`. This ssh public key should be the same key you used to clone the example app.
 
-3. For `Hostname` we will use `dokku.me`
+3. Set `Hostname` to `dokku.me`
 
 4. Check `Use virtualhost naming for apps` This will allow you to access `<project-name>.dokku.me`
 
-5. Edit your `/etc/hosts/` file and add another host  
+5. Edit your `/etc/hosts` file and add another host  
 `10.0.0.2 express-example.dokku.me`
 
 ## Set up project for Dokku (Part 2)
@@ -71,7 +71,34 @@ Now we're going to set up Dokku on our AWS EC2 server so we can push our changes
 `<instance's public IP> dokku.aws.me`
 
 ## Set up Dokku on your EC2 instance
+1. SSH into your EC2 instance  
+`ssh -i /path/to/file.pem ubuntu@dokku.aws.me`
 
+2. Install Dokku via `wget`  
+`wget https://raw.githubusercontent.com/progrium/dokku/v0.4.5/bootstrap.sh`  
+`sudo DOKKU_TAG=v0.4.5 bash`
 
+3. Once Dokku is installed, access [dokku.aws.me](http://dokku.aws.me) on your browser.  
+![browser](1.png "browser")
 
+4. Paste the same ssh public key as before, from `~/.ssh/id_rsa.pub`
+
+5. Set `Hostname` to `dokku.aws.me`
+
+6. Check `Use virtualhost naming for apps`
+
+7. Add another hostname to your `/etc/hosts` file.   
+`<instance's public IP> express-example.dokku.aws.me`
+
+## Set up project for Dokku (Part 3)
+1. Add the EC2 instance as a git remote to our example app so we can start pushing changes remotely to Dokku on our EC2 Ubuntu server.  
+`git remote add aws dokku@dokku.aws.me:express-example`
+
+2. Make a change to your view in the Express example app and push your changes  
+`git push aws master`
+
+# We're done!
+You can now see your changes on [http://express-example.dokku.aws.me](http://express-example.dokku.aws.me)! By having Dokku set up on our local machine via Vagrant and on EC2, we now have two environments to push and deploy our app. 
+
+I'm still learning how to use Dokku so if there are any errors, please let me know! 
 
