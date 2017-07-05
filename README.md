@@ -5,7 +5,7 @@ A tutorial on setting up Dokku on your local machine via Vagrant and on AWS EC2.
 1. Clone the [Dokku repo](https://github.com/dokku/dokku) to your local machine  
 `git clone git@github.com:dokku/dokku.git`
 
-2. Install [Vagrant](https://docs.vagrantup.com) (I suggest installing via [brew cask](http://caskroom.io/))  
+2. Install [Vagrant](https://docs.vagrantup.com) (I suggest installing via [brew cask](https://caskroom.github.io/))  
 `brew cask install vagrant`
 
 3. Install [VirtualBox](https://www.virtualbox.org) in order to set up Vagrant  
