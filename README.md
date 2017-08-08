@@ -62,7 +62,8 @@ Now we're going to set up Dokku on our AWS EC2 server so we can push our changes
 
 4. Configure your security group by adding types:
     - `SSH` on port `22`
-    - `HTTP` on port `80`  
+    - `HTTP` on port `80`
+    - (Adding `TCP` on port range `20000-65535` might be necessary too)
 ![security](3.png "security")
 
 5. Launch your new instance and download the `.pem` file for ssh access.
